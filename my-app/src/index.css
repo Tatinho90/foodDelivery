@@ -4,12 +4,42 @@
 }
 body{
   width: 100%;
+  font-family: 'Smythe', cursive;
 }
 
 .header-container{
   width: 100%;
   position: relative;
+  max-height: 250px;
+  overflow: hidden;
 }
-.header-container img {
+.header-container > img {
   width: 100%;
+/* object-fit: cover; */
+}
+.text-container{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  padding-left: 1em;
+  color: whitesmoke;
+}
+.text-container h3{
+  font-size: 1rem;
+  font-weight: 200;
+}
+.text-container h1{
+  font-size: 2.4rem;
+}
+@media (min-width: 600px){
+  .text-container h1{
+    font-size: 6vw;
+  }
+  .text-container h3{
+    font-size: 2vw;
+  }
 }

@@ -7,8 +7,11 @@ export default function Header(){
             <img 
                 src={HeaderImage}
                 alt="burger"/>
-        <h1>Tatinho's Diner</h1>
-        <h3>The best pizzas and burgers in town</h3>
+            <div className="text-container">
+                <h1>Tatinho's Diner</h1>
+                <h3>The best pizzas and burgers in town</h3>
+            </div>
+      
         </div>
     )
 }
