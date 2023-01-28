@@ -1,0 +1,15 @@
+*, ::before, ::after { 
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+  width: 100%;
+}
+
+.header-container{
+  width: 100%;
+  position: relative;
+}
+.header-container img {
+  width: 100%;
+}
