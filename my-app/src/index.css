@@ -43,3 +43,19 @@ body{
     font-size: 2vw;
   }
 }
+.menu-container img{
+  width: 25vw;
+  height:25vw;
+  object-fit:cover;
+  border-radius: 50%;
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin-left:auto;
+  margin-right: auto;
+  border-bottom: #D2D2D2 solid 1px;
+  padding: 2em 0;
+
+}

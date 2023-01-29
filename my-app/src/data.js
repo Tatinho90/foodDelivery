@@ -1,4 +1,4 @@
-const FoodItems = [
+const data = [
     {
         name: "Pizza",
         ingredients: "pepperoni, mushroom, mozzarella",
@@ -19,4 +19,4 @@ const FoodItems = [
     }
 ]
 
-export default FoodItems
+export default data
