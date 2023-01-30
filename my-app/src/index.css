@@ -121,7 +121,7 @@ body{
 }
 .complete-order{
   width: 100%;
-  max-width: 300px;
+  max-width: 380px;
   padding: 1em;
   margin-top: 2.5em;
   margin-bottom: 1.5em;
@@ -158,6 +158,77 @@ button{
 .smaller{
   font-size: 1.3rem;
 }
+.delete{
+color: #BBBBBB;
+font-size: 1.2rem;
+font-weight: 200;
+padding-left: 0.4em;
+cursor: pointer;
+background-color: transparent;
+border: none;
+font-family: 'Smythe', cursive;
+}
+.popup-container{
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  position:fixed;
+  top:0;
+  z-index: 1;
+}
+form{
+  width: 70%;
+  max-width: 400px;
+  height: 75%;
+  margin-top:auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 4px 6px 17px 1142px rgba(0,0,0,0.5);
+  gap: 1em;
+  padding: 2em 1.5em;
+  position: relative;
+  background: white;
+}
+form h3{
+  display:block;
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 1.6rem;
+}
+form input{
+  padding: 1em;
+  
+}
+.close-icon{
+  position: absolute;
+  top: 0.2em;
+  right: 0.3em;
+  font-size: 1.1rem;
+  color: rgba(0,0,0,0.4);
+  border: 0.02px solid rgba(0,0,0,0.2);
+  border-radius: 50%;
+  padding: 0.1em 0.3em; 
+  cursor: pointer;
+}
+.final-message{
+  background-color: #ECFDF5;
+  padding: 2em 0;
+  text-align: center;
+  width: 90%;
+  margin:1em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  color: #065F46;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 3px;
+  border: 1px solid #065F46;
+}
+
 @media (min-width: 600px){
   .text-container{
     padding-left: 5em;
@@ -197,11 +268,30 @@ button{
   .total-order, .complete-order{
     font-size: 3vw;
   }
-  .complete-order,
-  .light-small {
+  .complete-order
+  {
     font-size: 1.8vw;
+  }
+
+  .light-small,
+  .delete{
+    font-size: 2.1vw;
   }
   .smaller{
     font-size: 2.5vw;
   }
+  form h3{
+    font-size: 3vw;
+  }
+  form input{
+    font-size: 1.1vw;
+  }
+  form{
+    height: 85%;
+  }
+  .final-message{
+    max-width: 1000px;
+    font-size: 2.3vw;
+  }
+ 
 }
