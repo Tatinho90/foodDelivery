@@ -35,14 +35,7 @@ body{
 .text-container h1{
   font-size: 2.4rem;
 }
-@media (min-width: 600px){
-  .text-container h1{
-    font-size: 6vw;
-  }
-  .text-container h3{
-    font-size: 2vw;
-  }
-}
+
 .menu-container img{
   width: 25vw;
   height:25vw;
@@ -52,10 +45,101 @@ body{
 .menu-container {
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 90%;
+  max-width: 1000px;
   margin-left:auto;
   margin-right: auto;
   border-bottom: #D2D2D2 solid 1px;
   padding: 2em 0;
-
+  gap: 1em;
+  position: relative;
+  /* flex-wrap: wrap; */
+}
+.menu-container h1{
+  font-size: 1.9rem;
+}
+.menu-container h2{
+ color: #8B8B8B;
+ font-size: 1rem;
+ font-weight: 200;
+ padding: 0.3em 0;
+}
+.menu-container h3{
+  font-size: 1.3rem;
+}
+.add, .remove{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+  /* position: absolute; */
+  /* right: 2vw; */
+  width: 8vw;
+  height: 8vw;
+  border: 0.3px solid #8B8B8B;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.add:hover, .add:active{
+  background-color: #16DB99;
+  color: whitesmoke;
+}
+.remove:hover, .remove:active{
+  background-color: #FB7185  ;
+  color: whitesmoke;
+}
+.buttons{
+  display:flex;
+  position: absolute;
+  right: 0;
+  align-items: center;
+}
+.amount{
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0 0.3em;
+  font-size: 1.1rem;
+}
+.food-list{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 45%;
+}
+@media (min-width: 600px){
+  .text-container{
+    padding-left: 5em;
+  }
+  .text-container h1{
+    font-size: 6vw;
+  }
+  .text-container h3{
+    font-size: 2vw;
+  }
+  .menu-container img{
+    width: 15vw;
+    height: 15vw;
+  }
+  .menu-container h1{
+    font-size: 3.5vw;
+  }
+  .menu-container h2{
+   font-size: 2vw;
+   padding: 0.3em 0;
+  }
+  .menu-container h3{
+    font-size: 2.5vw;
+  }
+  .menu-container{
+    gap: 3em;
+    padding: 3.5em 0;
+  }
+  .add,.remove{
+    height: 5vw;
+    width: 5vw;
+    font-size: 2rem;
+  }
+  .amount{
+    font-size: 3vw;
+  }
 }

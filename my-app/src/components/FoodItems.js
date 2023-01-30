@@ -1,6 +1,7 @@
+import { useDebugValue } from "react"
 import data from "../data.js"
 
-export default function FoodItems(){
+export default function FoodItems(props){
     const menuItems = data.map(elem => (
         <div className="menu-container" key={elem.name}>
             <img 
@@ -11,7 +12,24 @@ export default function FoodItems(){
                     <h2>{elem.ingredients}</h2>
                     <h3>{`$${elem.price}`}</h3>
             </div>
-            <div>+</div>
+            <div className="buttons">
+                    <div className="remove" onClick={() => props.removeItem(elem)}> 
+                            <p>-</p>
+                    </div>
+                    <p className="amount" > 
+                        {props.orderedList.some(value => value.name === elem.name) ?
+                            props.orderedList.filter(thing => thing.name === elem.name )[0].orderedAmount
+                            :
+                            0
+                            } 
+                            </p>
+
+                    <div className="add" onClick={() => props.addItem(elem)}> 
+                            <p>+</p>
+                    </div>
+            </div>
+           
+
         </div>
     ))
     return (
