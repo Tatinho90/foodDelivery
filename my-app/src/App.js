@@ -58,6 +58,9 @@ function App() {
       orderedList= {orderedList}
       removeItem = {removeItem}
       />
+   {orderedList.length > 0 && <OrderTotal 
+      orderedList= {orderedList} 
+          />}
     </div>
   );
 }
