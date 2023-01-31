@@ -81,11 +81,11 @@ body{
   align-items: center;
   cursor: pointer;
 }
-.add:hover, .add:active{
+.add:hover{
   background-color: #16DB99;
   color: whitesmoke;
 }
-.remove:hover, .remove:active{
+.remove:hover {
   background-color: #FB7185  ;
   color: whitesmoke;
 }
@@ -99,6 +99,7 @@ body{
   font-family: 'Courier New', Courier, monospace;
   padding: 0 0.3em;
   font-size: 1.1rem;
+  color: #8B8B8B;
 }
 .food-list{
   display:flex;
@@ -227,6 +228,11 @@ form input{
   font-weight: 400;
   border-radius: 3px;
   border: 1px solid #065F46;
+}
+.bold{
+  font-weight: 700;
+  color: #069e3b;
+  /* font-size: 1.2rem; */
 }
 
 @media (min-width: 600px){

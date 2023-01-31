@@ -8,6 +8,9 @@ function App() {
   const [orderedList, setOrderedList] = useState([])
   const [completed, setCompleted] = useState(false)
   const [finito, setFinito] = useState(false)
+  const [formData, setFormData] = useState({})
+
+  let firstName= formData.name? formData.name.split(" ").slice(0,1) : ""
 
 
   function addItem(item){
@@ -75,11 +78,19 @@ function App() {
     setCompleted(prev => !prev)
   }
 
-  function setPayed(){
-    setFinito(prev => !prev)
+  function setPayed(event){
+    setFinito(prev => !prev);
   }
 
-  console.log(orderedList)  
+  function connectData(event){
+    const {value, name} = event.target
+    setFormData(prev => (
+      {...prev, 
+        [name]: value
+    }))
+  }
+
+  console.log(formData)
 
   return (
     <div className="App">
@@ -101,10 +112,12 @@ function App() {
     <PopUP
     setOrderCompleted = {setOrderCompleted}
     setPayed = {setPayed}
+    connectData = {connectData}
     />}
 
     {finito && 
-    <p className="final-message">Thank you for your order! Your food is now on its way!</p>}
+    <p 
+      className="final-message">Thank you for your order {firstName}! Your food is now on its way!</p>}
 
     </div>
 
