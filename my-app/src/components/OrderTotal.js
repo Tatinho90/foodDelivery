@@ -2,8 +2,6 @@ import {useEffect, useState} from "react"
 
 export default function OrderTotal(props){
 
-    let totalValue = 0
-    props.orderedList.forEach(elem => totalValue+= (elem.price * elem.orderedAmount))
 
     const list = props.orderedList.map(elem => {
         if(elem.orderedAmount > 0){
@@ -29,7 +27,7 @@ export default function OrderTotal(props){
             {list}
             <div className="prices overlined">
                 <h3>Total Price:</h3>
-                <h3 className="smaller">{`$${totalValue}`}</h3>
+                <h3 className="smaller">{`$${props.totalValue}`}</h3>
             </div>
             
             <button 

@@ -34,6 +34,7 @@ body{
 }
 .text-container h1{
   font-size: 2.4rem;
+  cursor:pointer ;
 }
 
 .menu-container img{
@@ -178,7 +179,7 @@ font-family: 'Smythe', cursive;
   top:0;
   z-index: 1;
 }
-form{
+.form{
   width: 70%;
   max-width: 400px;
   height: 75%;
@@ -193,13 +194,13 @@ form{
   position: relative;
   background: white;
 }
-form h3{
+.form h3{
   display:block;
   text-align: center;
   padding-bottom: 1em;
   font-size: 1.6rem;
 }
-form input{
+.form input{
   padding: 1em;
   
 }
@@ -286,18 +287,21 @@ form input{
   .smaller{
     font-size: 2.5vw;
   }
-  form h3{
+  .form h3{
     font-size: 3vw;
   }
-  form input{
+  .form input{
     font-size: 1.1vw;
   }
-  form{
+  .form{
     height: 85%;
   }
   .final-message{
     max-width: 1000px;
     font-size: 2.3vw;
+  }
+  .smallest{
+    font-size: 1.3vw; 
   }
  
 }

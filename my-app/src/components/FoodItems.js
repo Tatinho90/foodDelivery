@@ -2,14 +2,16 @@ import { useDebugValue } from "react"
 import data from "../data.js"
 
 export default function FoodItems(props){
+    
+    
     const menuItems = data.map(elem =>{ 
+        
         const value =  props.orderedList.some(value => value.name === elem.name) ?
-            props.orderedList.filter(thing => thing.name === elem.name )[0].orderedAmount
-            :
-            0
-
-        const isValuePositive = value > 0 ? "bold" : ""
-            
+        props.orderedList.filter(thing => thing.name === elem.name )[0].orderedAmount
+        :
+        0
+        
+        const isValuePositive = value > 0 ? "bold" : ""    
 
         return (
         <div className="menu-container" key={elem.name}>
@@ -22,7 +24,7 @@ export default function FoodItems(props){
                     <h3>{`$${elem.price}`}</h3>
             </div>
             <div className="buttons">
-                    <div className="remove" onClick={() => props.removeItem(elem)}> 
+                    <div className="remove" onClick={() =>props.removeItem(elem)}> 
                             <p>-</p>
                     </div>
                     <p className={`amount ${isValuePositive}`} > 
