@@ -217,7 +217,7 @@ font-family: 'Smythe', cursive;
 }
 .final-message{
   background-color: #ECFDF5;
-  padding: 2em 0;
+  padding: 2em 1em;
   text-align: center;
   width: 90%;
   margin:1em;
